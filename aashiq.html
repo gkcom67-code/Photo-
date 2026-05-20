@@ -8,204 +8,151 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#0f0f0f;
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
+background:#0f0f0f;
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
 }
-
-/* MAIN BOX */
 
 .main-box{
+width:1536px;
+height:1536px;
 
-    width:1536px;
-    height:1536px;
+background:
+linear-gradient(
+to bottom,
+#0c6417 0%,
+#0c6417 62%,
+#d60000 62%,
+#d60000 100%);
 
-    background:
-    linear-gradient(
-    to bottom,
-    #0c6417 0%,
-    #0c6417 62%,
-    #d60000 62%,
-    #d60000 100%);
+border:18px solid #ff1a1a;
 
-    border:18px solid #ff1a1a;
+overflow:hidden;
 
-    overflow:hidden;
-
-    position:relative;
+position:relative;
 }
 
-/* IMAGE AREA */
-
 .frames{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:40px;
-
-    padding:40px;
+display:flex;
+justify-content:space-between;
+gap:40px;
+padding:40px;
 }
 
 .frame{
+width:48%;
+height:950px;
 
-    width:48%;
+background:#000;
 
-    height:950px;
+border-radius:60px;
 
-    background:#000;
+overflow:hidden;
 
-    border-radius:60px;
+border:6px solid #222;
 
-    overflow:hidden;
-
-    border:6px solid #222;
-
-    position:relative;
-
-    box-shadow:
-    0 0 20px #fff,
-    0 0 40px #fff,
-    0 0 60px #fff;
+box-shadow:
+0 0 20px #fff,
+0 0 40px #fff,
+0 0 60px #fff;
 }
 
 .frame img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-/* MIDDLE LOGO */
-
 .middle-logo{
+position:absolute;
 
-    position:absolute;
+left:50%;
+top:57%;
 
-    left:50%;
+transform:translate(-50%,-50%);
 
-    top:57%;
+width:180px;
+height:180px;
 
-    transform:translate(-50%,-50%);
+border-radius:50%;
 
-    width:180px;
-    height:180px;
+overflow:hidden;
 
-    border-radius:50%;
+border:8px solid #fff;
 
-    overflow:hidden;
-
-    border:8px solid #fff;
-
-    z-index:100;
-
-    box-shadow:
-    0 0 20px rgba(0,0,0,0.6);
+z-index:100;
 }
 
 .middle-logo img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
-
-/* TEXT */
 
 .bottom-text{
+text-align:center;
 
-    text-align:center;
+color:#fff;
 
-    color:#fff;
+font-size:62px;
 
-    font-size:62px;
+font-weight:bold;
 
-    font-weight:bold;
+line-height:1.4;
 
-    line-height:1.4;
+margin-top:110px;
 
-    margin-top:110px;
-
-    text-shadow:
-    0 0 8px #000,
-    0 0 15px #000;
-
-    padding:0 40px;
+padding:0 40px;
 }
 
-/* CREDIT */
-
 .credit{
-
-    text-align:center;
-
-    margin-top:25px;
+text-align:center;
+margin-top:25px;
 }
 
 .credit a{
+color:#fff;
 
-    color:#fff;
+text-decoration:none;
 
-    text-decoration:none;
+font-size:38px;
 
-    font-size:38px;
-
-    font-weight:bold;
-
-    text-shadow:
-    0 0 5px #000,
-    0 0 10px #000;
+font-weight:bold;
 }
-
-.credit a:hover{
-
-    color:#00ff73;
-}
-
-/* CONTROL PANEL */
 
 .control-panel{
+position:fixed;
 
-    position:fixed;
+right:20px;
+top:20px;
 
-    right:20px;
-    top:20px;
+width:340px;
 
-    width:340px;
+background:#1a1a1a;
 
-    background:#1a1a1a;
+border-radius:20px;
 
-    border-radius:20px;
+padding:20px;
 
-    padding:20px;
-
-    z-index:999;
-
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
+z-index:999;
 }
 
 .control-panel h2{
+color:#fff;
 
-    color:#fff;
+text-align:center;
 
-    text-align:center;
-
-    margin-bottom:20px;
-
-    font-size:30px;
+margin-bottom:20px;
 }
 
 .control-panel input,
@@ -213,101 +160,29 @@ body{
 .control-panel select,
 .control-panel button{
 
-    width:100%;
+width:100%;
 
-    margin-bottom:15px;
+margin-bottom:15px;
 
-    padding:15px;
+padding:15px;
 
-    border:none;
+border:none;
 
-    border-radius:12px;
+border-radius:12px;
 
-    font-size:18px;
+font-size:18px;
 }
 
 .control-panel textarea{
-
-    height:120px;
-
-    resize:none;
+height:120px;
+resize:none;
 }
 
 .control-panel button{
-
-    background:#00b140;
-
-    color:#fff;
-
-    font-weight:bold;
-
-    cursor:pointer;
-}
-
-.control-panel input[type="range"]{
-
-    padding:0;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-body{
-    padding:0;
-}
-
-.main-box{
-
-    width:100vw;
-    height:100vw;
-}
-
-.frames{
-
-    gap:15px;
-
-    padding:15px;
-}
-
-.frame{
-
-    height:58vw;
-
-    border-radius:25px;
-}
-
-.middle-logo{
-
-    width:90px;
-    height:90px;
-}
-
-.bottom-text{
-
-    font-size:24px;
-
-    margin-top:40px;
-}
-
-.credit a{
-
-    font-size:18px;
-}
-
-.control-panel{
-
-    width:100%;
-
-    right:0;
-
-    top:auto;
-
-    bottom:0;
-
-    border-radius:20px 20px 0 0;
-}
-
+background:#00b140;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
 }
 
 </style>
@@ -315,281 +190,238 @@ body{
 
 <body>
 
-<!-- CONTROL PANEL -->
-
 <div class="control-panel">
 
-    <h2>Aashiq Cyber</h2>
+<h2>Aashiq Cyber</h2>
 
-    <!-- IMAGE UPLOAD -->
+<input type="file" id="img1" accept="image/*">
 
-    <input
-    type="file"
-    id="img1"
-    accept="image/*">
+<input type="file" id="img2" accept="image/*">
 
-    <input
-    type="file"
-    id="img2"
-    accept="image/*">
+<textarea
+id="caption"
+placeholder="নিচের ক্যাপশন পরিবর্তন করুন"></textarea>
 
-    <!-- CAPTION -->
+<button onclick="changeCaption()">
+Change Caption
+</button>
 
-    <textarea
-    id="caption"
-    placeholder="নিচের ক্যাপশন পরিবর্তন করুন">
-    </textarea>
+<select id="bgStyle">
 
-    <button onclick="changeCaption()">
+<option value="greenred">
+Green + Red
+</option>
 
-        Change Caption
+<option value="blackred">
+Black + Red
+</option>
 
-    </button>
+<option value="bluepurple">
+Blue + Purple
+</option>
 
-    <!-- BACKGROUND -->
+<option value="orangeblack">
+Orange + Black
+</option>
 
-    <select id="bgStyle">
+<option value="pinkpurple">
+Pink + Purple
+</option>
 
-        <option value="greenred">
-            Green + Red
-        </option>
+<option value="goldblack">
+Gold + Black
+</option>
 
-        <option value="blackred">
-            Black + Red
-        </option>
+</select>
 
-        <option value="bluepurple">
-            Blue + Purple
-        </option>
+<button onclick="changeBackground()">
+Change Background
+</button>
 
-        <option value="orangeblack">
-            Orange + Black
-        </option>
+<input
+type="range"
+id="logoSize"
+min="80"
+max="400"
+value="180">
 
-        <option value="pinkpurple">
-            Pink + Purple
-        </option>
-
-        <option value="goldblack">
-            Gold + Black
-        </option>
-
-    </select>
-
-    <button onclick="changeBackground()">
-
-        Change Background
-
-    </button>
-
-    <!-- LOGO SIZE -->
-
-    <input
-    type="range"
-    id="logoSize"
-    min="80"
-    max="400"
-    value="180">
-
-    <button onclick="changeLogoSize()">
-
-        Logo Size Change
-
-    </button>
+<button onclick="changeLogoSize()">
+Logo Size Change
+</button>
 
 </div>
 
-<!-- MAIN BOX -->
-
 <div class="main-box">
 
-    <!-- IMAGE AREA -->
+<div class="frames">
 
-    <div class="frames">
+<div class="frame">
 
-        <!-- LEFT IMAGE -->
+<img
+id="preview1"
+src="https://via.placeholder.com/700x1200">
 
-        <div class="frame">
+</div>
 
-            <img
-            id="preview1"
-            src="https://via.placeholder.com/700x1200">
+<div class="frame">
 
-        </div>
+<img
+id="preview2"
+src="https://via.placeholder.com/700x1200">
 
-        <!-- RIGHT IMAGE -->
+</div>
 
-        <div class="frame">
+</div>
 
-            <img
-            id="preview2"
-            src="https://via.placeholder.com/700x1200">
+<div class="middle-logo">
 
-        </div>
+<img
+id="logoPreview"
+src="./1000109471.jpg">
 
-    </div>
+</div>
 
-    <!-- MIDDLE LOGO -->
+<div
+class="bottom-text"
+id="mainCaption">
 
-    <div class="middle-logo">
+অশ্লীলতা ছড়ানোর দায়ে আরও<br>
+একটি পেজ পুরোপুরি রিমুভ করা হল
 
-        <img
-        id="logoPreview"
-        src="1000109471.jpg">
+</div>
 
-    </div>
+<div class="credit">
 
-    <!-- TEXT -->
+<a
+href="https://www.facebook.com/share/1CoirCye5P/"
+target="_blank">
 
-    <div
-    class="bottom-text"
-    id="mainCaption">
+By Habibur Rahman
 
-        অশ্লীলতা ছড়ানোর দায়ে আরও<br>
-        একটি পেজ পুরোপুরি রিমুভ করা হল
+</a>
 
-    </div>
-
-    <!-- CREDIT -->
-
-    <div class="credit">
-
-        <a
-        href="https://www.facebook.com/share/1CoirCye5P/"
-        target="_blank">
-
-            By Habibur Rahman
-
-        </a>
-
-    </div>
+</div>
 
 </div>
 
 <script>
 
-/* IMAGE 1 */
-
 document
 .getElementById("img1")
 .addEventListener("change",function(e){
 
-    const file =
-    e.target.files[0];
+const file=e.target.files[0];
 
-    if(file){
+if(file){
 
-        document
-        .getElementById("preview1")
-        .src =
-        URL.createObjectURL(file);
-    }
+document
+.getElementById("preview1")
+.src=URL.createObjectURL(file);
+
+}
 
 });
-
-/* IMAGE 2 */
 
 document
 .getElementById("img2")
 .addEventListener("change",function(e){
 
-    const file =
-    e.target.files[0];
+const file=e.target.files[0];
 
-    if(file){
+if(file){
 
-        document
-        .getElementById("preview2")
-        .src =
-        URL.createObjectURL(file);
-    }
+document
+.getElementById("preview2")
+.src=URL.createObjectURL(file);
+
+}
 
 });
 
-/* CHANGE CAPTION */
-
 function changeCaption(){
 
-    const text =
-    document
-    .getElementById("caption")
-    .value;
+const text=
+document
+.getElementById("caption")
+.value;
 
-    document
-    .getElementById("mainCaption")
-    .innerHTML =
-    text.replace(/\n/g,"<br>");
+document
+.getElementById("mainCaption")
+.innerHTML=
+text.replace(/\n/g,"<br>");
+
 }
-
-/* CHANGE BACKGROUND */
 
 function changeBackground(){
 
-    const style =
-    document
-    .getElementById("bgStyle")
-    .value;
+const style=
+document
+.getElementById("bgStyle")
+.value;
 
-    const box =
-    document
-    .querySelector(".main-box");
+const box=
+document
+.querySelector(".main-box");
 
-    if(style === "greenred"){
+if(style==="greenred"){
 
-        box.style.background =
-        "linear-gradient(to bottom,#0c6417 0%,#0c6417 62%,#d60000 62%,#d60000 100%)";
-    }
-
-    else if(style === "blackred"){
-
-        box.style.background =
-        "linear-gradient(to bottom,#111 0%,#111 62%,#d60000 62%,#d60000 100%)";
-    }
-
-    else if(style === "bluepurple"){
-
-        box.style.background =
-        "linear-gradient(to bottom,#0047ff 0%,#0047ff 62%,#7a00ff 62%,#7a00ff 100%)";
-    }
-
-    else if(style === "orangeblack"){
-
-        box.style.background =
-        "linear-gradient(to bottom,#ff7300 0%,#ff7300 62%,#111 62%,#111 100%)";
-    }
-
-    else if(style === "pinkpurple"){
-
-        box.style.background =
-        "linear-gradient(to bottom,#ff008c 0%,#ff008c 62%,#7b00ff 62%,#7b00ff 100%)";
-    }
-
-    else if(style === "goldblack"){
-
-        box.style.background =
-        "linear-gradient(to bottom,#ffb300 0%,#ffb300 62%,#111 62%,#111 100%)";
-    }
+box.style.background=
+"linear-gradient(to bottom,#0c6417 0%,#0c6417 62%,#d60000 62%,#d60000 100%)";
 
 }
 
-/* LOGO SIZE */
+else if(style==="blackred"){
+
+box.style.background=
+"linear-gradient(to bottom,#111 0%,#111 62%,#d60000 62%,#d60000 100%)";
+
+}
+
+else if(style==="bluepurple"){
+
+box.style.background=
+"linear-gradient(to bottom,#0047ff 0%,#0047ff 62%,#7a00ff 62%,#7a00ff 100%)";
+
+}
+
+else if(style==="orangeblack"){
+
+box.style.background=
+"linear-gradient(to bottom,#ff7300 0%,#ff7300 62%,#111 62%,#111 100%)";
+
+}
+
+else if(style==="pinkpurple"){
+
+box.style.background=
+"linear-gradient(to bottom,#ff008c 0%,#ff008c 62%,#7b00ff 62%,#7b00ff 100%)";
+
+}
+
+else if(style==="goldblack"){
+
+box.style.background=
+"linear-gradient(to bottom,#ffb300 0%,#ffb300 62%,#111 62%,#111 100%)";
+
+}
+
+}
 
 function changeLogoSize(){
 
-    const size =
-    document
-    .getElementById("logoSize")
-    .value;
+const size=
+document
+.getElementById("logoSize")
+.value;
 
-    const logo =
-    document
-    .querySelector(".middle-logo");
+const logo=
+document
+.querySelector(".middle-logo");
 
-    logo.style.width =
-    size + "px";
+logo.style.width=size+"px";
 
-    logo.style.height =
-    size + "px";
+logo.style.height=size+"px";
+
 }
 
 </script>
